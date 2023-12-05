@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+#container {
+  width: 80%;
+  margin: 300px auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+p {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.btn {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 20px 30px;
+  border-radius: 10px;
+  border: none;
+  background-color: #186F65;
+  color: #fff;
+}
+span {
+  display: block;
+  font-size: 28px;
+  font-weight: 600;
+}
