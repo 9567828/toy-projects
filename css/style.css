@@ -1,0 +1,151 @@
+.on {
+  display: none;
+}
+#container {
+  width: 80%;
+  margin: 100px auto;
+}
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.header h1 {
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-family: 'GyeonggiTitle';
+}
+.header p {
+  color: #424242;
+}
+
+
+.now_wrap {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.now_wrap h4 {
+  margin: 0 10px;
+  font-size: 25px;
+  font-family: 'GyeonggiTitle';
+}
+
+.input_wrap {
+  width: 500px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input_wrap h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+input[type="date"] {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  margin-right: 10px;
+  padding: 20px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+input[type="date"]::before {
+  content: attr(data-placeholder);
+  width: 100%;
+}
+/* valid를 사용하려면 input태그에 required가 들어가야함 */
+input[type="date"]:valid::before {
+  display: none;
+}
+input[type="date"]::before {
+  color: #ccc;
+}
+.input_wrap i {
+  position: absolute;
+  top: 42px;
+  right: 46%;
+  cursor: pointer;
+  color: #0C356A;
+}
+.input_wrap .btn {
+  width: 60px;
+  height: 42px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #0C356A;
+  color: #fff;
+}
+
+.txt_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.txt_wrap span:first-child {
+  margin-bottom: 20px;
+}
+
+
+.popup_wrap {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup_wrap p {
+  margin-right: 10px;
+}
+.popup_wrap .btn.b2 {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.layer {
+  width: 500px;
+  height: 550px;
+  margin: auto;
+  padding: 30px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.layer .btn.b3 {
+  margin-top: 30px;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0C356A;
+}
+.open {
+  display: block;
+}
+.close {
+  display: none;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나이계산하기</title>
+
+  <!-- 경기청년제목체 -->
+  <link href="https://webfontworld.github.io/gyeonggi/GyeonggiTitle.css" rel="stylesheet">
+  <!-- 프리텐다드 -->
+  <link href="https://webfontworld.github.io/pretendard/Pretendard.css" rel="stylesheet">
+
+
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- css연결 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+    <div class="header">
+      <h1>나이 계산</h1>
+      <p>
+        2023년 06월 28일 개정 후 나이 계산 방법 입니다.
+      </p>
+    </div>
+
+    <!-- now_wrap -->
+    <div class="now_wrap">
+      <p>현재날짜는 <h4></h4> 입니다.</p>
+    </div>
+
+    <!-- input_wrap -->
+    <div class="input_wrap">
+      <h4>생년월일을 입력해 주세요.</h4>
+      <form id="date_form">
+        <input type="date" data-placeholder="yyyy-mm-dd" required />
+        <i class="fa-solid fa-calendar-days"></i>
+        <button class="btn">입력</button>
+      </form>
+    </div>
+
+    <!-- txt_wrap -->
+    <div class="txt_wrap">
+      <span class="on"></span>
+      <span class="on"></span>
+    </div>
+
+    <!-- 팝업 -->
+    <div class="popup_wrap">
+      <p>나이 계산이 헷갈리시나요?</p>
+      <button class="btn b2">🔍</button>
+    </div>
+    <div class="layer">
+      <h1>나이계산법</h1>
+      <p>
+        1989년생을 기준으로 합니다.<br>
+        <br>
+        개정 전 출생 후 1살<br>
+        2023년 기준: 35살<br>
+        연나이+1살이 되어 새해 마다 모두 다 같이 나이를 한살 씩 먹었습니다.<br>
+        <br>
+        개정 후 출생 후 0살<br>
+        2023년 기준: 34살<br>
+      </p>
+      <h3>만 나이 계산방법</h3>
+      <p>
+        개정 전의 만나이 계산 방법입니다. <br>
+        생일을 기준으로 지나지 않으면 (연나이-2살)<br>
+        생일이 지나면 (연나이-1살)<br>
+        <br>
+        ex1) <br>
+        생일: 1989년 8월 28일<br>
+        기준날짜: 2023년 12월 8일<br>
+        <br>
+        연 나이: (2023 - 1989) = 34살<br>
+        만 나이: 생일이 지났으므로 34살 입니다.<br>
+        <br>
+        ex2)<br>
+        생일: 1989년 12월 10일<br>
+        연 나이 = 34살<br>
+        만 나이 = 생일이 지나지 않았으므로 35살 입니다.<br>
+      </p>
+      <p>
+        앞으로는 간단하게 본인의 생일을 기준으로 +1살 씩 계산하시면 됩니다.
+      </p>
+      <button class="btn b3">닫기</button>
+    </div>
+  </div>
+
+  <script src="js/nowdate.js"></script>
+  <script src="js/calcAge.js"></script>
+  <script src="js/layer.js"></script>
+</body>
+</html>
