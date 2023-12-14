@@ -32,8 +32,6 @@
 }
 
 .input_wrap {
-  width: 500px;
-  margin: 0 auto;
   padding-bottom: 30px;
   position: relative;
   display: flex;
@@ -62,19 +60,12 @@ input[type="date"]::-webkit-inner-spin-button {
   display: none;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  color: transparent;
-  cursor: pointer;
+  background: url("../img/calendar-days-solid.svg") no-repeat center; 
 }
-input[type="date"]::before {
+/* input[type="date"]::before {
   content: attr(data-placeholder);
   width: 100%;
-}
+} */
 /* valid를 사용하려면 input태그에 required가 들어가야함 */
 input[type="date"]:valid::before {
   display: none;
@@ -82,13 +73,13 @@ input[type="date"]:valid::before {
 input[type="date"]::before {
   color: #ccc;
 }
-.input_wrap i {
+/* .input_wrap i {
   position: absolute;
   top: 42px;
   right: 46%;
   cursor: pointer;
   color: #0C356A;
-}
+} */
 .input_wrap .btn {
   width: 60px;
   height: 42px;
@@ -104,10 +95,32 @@ input[type="date"]::before {
   justify-content: center;
   align-items: center;
 }
-.txt_wrap span:first-child {
+.txt_wrap h4:first-child {
   margin-bottom: 20px;
 }
-
+.txt_wrap .birthyear {
+  font-size: 18px;
+}
+.txt_wrap .yearage,
+.txt_wrap .nowage {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0C356A;
+}
+.txt_wrap.on {
+  display: none;
+}
+.month_age {
+  text-align: center;
+}
+.month_age h4 {
+  margin-bottom: 20px;
+}
+.month_age .month,
+.month_age .days {
+  font-weight: 600;
+  color: #0C356A;
+}
 
 .popup_wrap {
   margin-top: 100px;
@@ -148,4 +161,13 @@ input[type="date"]::before {
 }
 .close {
   display: none;
+}
+
+@media screen and ( max-width: 450px ) {
+  #container {
+    width: 100%;
+  }
+  .now_wrap h4 {
+    font-size: 20px;
+  }
 }

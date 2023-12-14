@@ -37,17 +37,23 @@
     <div class="input_wrap">
       <h4>생년월일을 입력해 주세요.</h4>
       <form id="date_form">
-        <input type="date" data-placeholder="yyyy-mm-dd" required />
-        <i class="fa-solid fa-calendar-days"></i>
+        <input type="date" max="9999-12-31" required/>
+        <!-- <i class="fa-solid fa-calendar-days"></i> -->
         <button class="btn">입력</button>
       </form>
     </div>
 
     <!-- txt_wrap -->
-    <div class="txt_wrap">
-      <span class="on"></span>
-      <span class="on"></span>
+    <div class="txt_wrap on">
+      <h4 class="cong_birth"></h4>
+      <h4><span class="birthyear"></span>년생의 연나이는 <span class="yearage"></span>살 입니다</h4>
+      <h4>현재나이는 <span class="nowage"></span>살 입니다</h4>
     </div>
+    <div class="month_age on">
+      <h4>태어난지 <span class="month"></span>개월 <span class="days"></span>일 입니다.</h4>
+      <span>아기 나이는 30일 기준으로 계산 하였습니다.</span>
+    </div>
+    <span class="empty"></span>
 
     <!-- 팝업 -->
     <div class="popup_wrap">
@@ -55,38 +61,32 @@
       <button class="btn b2">🔍</button>
     </div>
     <div class="layer">
-      <h1>나이계산법</h1>
-      <p>
-        1989년생을 기준으로 합니다.<br>
-        <br>
-        개정 전 출생 후 1살<br>
-        2023년 기준: 35살<br>
-        연나이+1살이 되어 새해 마다 모두 다 같이 나이를 한살 씩 먹었습니다.<br>
-        <br>
-        개정 후 출생 후 0살<br>
-        2023년 기준: 34살<br>
-      </p>
-      <h3>만 나이 계산방법</h3>
-      <p>
-        개정 전의 만나이 계산 방법입니다. <br>
-        생일을 기준으로 지나지 않으면 (연나이-2살)<br>
-        생일이 지나면 (연나이-1살)<br>
-        <br>
-        ex1) <br>
-        생일: 1989년 8월 28일<br>
-        기준날짜: 2023년 12월 8일<br>
-        <br>
-        연 나이: (2023 - 1989) = 34살<br>
-        만 나이: 생일이 지났으므로 34살 입니다.<br>
-        <br>
-        ex2)<br>
-        생일: 1989년 12월 10일<br>
-        연 나이 = 34살<br>
-        만 나이 = 생일이 지나지 않았으므로 35살 입니다.<br>
-      </p>
-      <p>
-        앞으로는 간단하게 본인의 생일을 기준으로 +1살 씩 계산하시면 됩니다.
-      </p>
+      <div class="tit_wrap">
+        <h1>나이 계산법</h1>
+        <p>
+          한국은 원래 ‘세는나이’라 하는 태아일 때 부터 인간 으로 인정 한다는<br> 
+          인간 존중을 기반 으로 한다는 설의 나이 계산법을 사용해 왔습니다.<br>
+          출산과 동시에 한살이 되어 매년 새해 마다 한살씩 느는 나이 계산법입니다.<br>
+        </p>
+      </div>
+      <div class="default_count">
+        <h3>나이계산은 1989년생을 기준으로 합니다.</h3>
+        <p>2023년 - 1989년: 연나이 = 34살</p>
+        <p>한국식 세는나이: 34+1살 = 35살</p>
+      </div>
+      <div class="before">
+        <h4>만나이 통일법 개정전 만나이 계산법</h4>
+        <p>생일전-2살 = 33살</p>
+        <p>생일후-1살 = 34살</p>
+      </div>
+      <div class="current">
+        <h4>2023년 6월 28일 만나이 통일법 시행 후</h4>
+        <p>생일전 연나이 -1살 = 33살</p>
+        <p>생일후 +1살 = 34살</p>
+      </div>
+      <p>이후로는 각자 생일날짜에 맞추어 +1살씩 계산 하면 됩니다.</p>
+      <p>자세한 내용은 <a href="https://www.moleg.go.kr/menu.es?mid=a10111060000" target="_blank">만나이통일법</a>에서 확인하세요!</p>
+
       <button class="btn b3">닫기</button>
     </div>
   </div>
