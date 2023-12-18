@@ -14,7 +14,7 @@ openBtn.addEventListener("click", clickedPopup)
 function closePopup() {
   layer.classList.toggle(CLOSE)
   layer.classList.remove(OPEN)
-layer.classList.remove(CLOSE)
+  layer.classList.remove(CLOSE)
 }
 
 closeBtn.addEventListener("click", closePopup)

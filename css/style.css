@@ -16,6 +16,7 @@
 }
 .header p {
   color: #424242;
+  padding-bottom: 20px;
 }
 
 
@@ -123,7 +124,7 @@ input[type="date"]::before {
 }
 
 .popup_wrap {
-  margin-top: 100px;
+  margin: 100px 0 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,21 +141,84 @@ input[type="date"]::before {
   width: 500px;
   height: 550px;
   margin: auto;
-  padding: 30px;
-  background-color: #eee;
+  padding: 30px 20px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  text-align: center;
   display: none;
 }
+.layer strong {
+  font-weight: 600;
+}
+.layer .tit_wrap {
+  padding-bottom: 20px;
+}
+.layer .tit_wrap p {
+  line-height: 120%;
+}
+.layer .tit_wrap h1 {
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+.layer .default_count {
+  position: relative;
+  padding: 20px 0;
+}
+.layer .default_count::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 450px;
+  height: 1px;
+  background-color: #B8B8B8;
+}
+.layer .calc {
+  width: 100%;
+  padding: 20px 0 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.layer .before h4,
+.layer .current h4 {
+  padding-bottom: 15px;
+}
+.layer .before p,
+.layer .current p {
+  text-align: left;
+}
+.layer .before {
+  position: relative;
+}
+.layer .before::before {
+  content: '';
+  position: absolute;
+  right: -26px;
+  width: 1px;
+  height: 85px;
+  background-color: #B8B8B8;
+}
+.layer .txt_wrap p:first-child {
+  padding-bottom: 20px;
+}
+.layer .txt_wrap a {
+  color: #0C356A;
+  font-weight: 600;
+}
 .layer .btn.b3 {
-  margin-top: 30px;
+  margin-top: 35px;
   width: 80px;
   height: 30px;
   border-radius: 5px;
   color: #fff;
   background-color: #0C356A;
+  cursor: pointer;
 }
 .open {
   display: block;
@@ -162,6 +226,7 @@ input[type="date"]::before {
 .close {
   display: none;
 }
+
 
 @media screen and ( max-width: 450px ) {
   #container {

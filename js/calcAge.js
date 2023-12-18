@@ -17,32 +17,24 @@ function paintAge (birthDay, findYear) {
   const thisYear = today.getFullYear()
   const ageCalc = today - birthDay
 
-  const BYage = thisYear - findYear
-
-  const nowMonth = today.getMonth()+1
-  const nowday = today.getDate()
-  const BMonth = birthDay.getMonth()+1
-  const BDate = birthDay.getDate()
-
-  const nowDate = parseInt(`${nowMonth}${nowday}`)
-  const birthDD = parseInt(`${BMonth}${BDate}`)
-
-  console.log(nowDate)
-  console.log(birthDD)
-
   console.log(today, birthDay)
 
-  const YD = Math.floor(ageCalc / (1000*60*60*24))
-  const YM = Math.floor(ageCalc / (1000*60*60*24*365) * 12)
-  const YY = Math.floor(ageCalc / (1000*60*60*24*365))
+  const BYage = thisYear - findYear
+  const nowDate = parseInt(`${today.getMonth()+1}${today.getDate()}`)
+  const birthDD = parseInt(`${birthDay.getMonth()+1}${birthDay.getDate()}`)
 
+  const YD = Math.floor(ageCalc / (1000*60*60*24)) // 출생 후 일수
+  // const YM = Math.floor(ageCalc / (1000*60*60*24*365) * 12) // 출생 후 개월수
+  const YY = Math.floor(ageCalc / (1000*60*60*24*365)) // 출생후 년수 - 나이
+
+  //아기 개월 수 (30일 기준 계산)
   const BM = Math.floor(YD / 30)
   const BD = YD - (BM * 30)
 
   console.log(BM, BD)
-  console.log(YY, YM, YD)
+  console.log(YY, YD)
 
-  if (YY == 0) {
+  if (findYear == thisYear) {
     MONTHAGE.classList.remove(ON)
     monthAge.innerText = BM
     dayAge.innerText = BD
@@ -52,7 +44,7 @@ function paintAge (birthDay, findYear) {
     TXTWRAP.classList.remove(ON)
     BYear.innerText = findYear
     yearAge.innerText = BYage
-    nowAge.innerText = YY
+    nowAge.innerText = BYage
     
   } else if (birthDay > today) {
     console.log("안태어났다.")
@@ -63,14 +55,14 @@ function paintAge (birthDay, findYear) {
     TXTWRAP.classList.remove(ON)
     BYear.innerText = findYear
     yearAge.innerText = BYage
-    nowAge.innerText = YY-1
+    nowAge.innerText = BYage-1
 
   } else if (nowDate == birthDD) {
     console.log("생일이다")
     TXTWRAP.classList.remove(ON)
     BYear.innerText = findYear
     yearAge.innerText = BYage
-    nowAge.innerText = YY
+    nowAge.innerText = BYage
     CONGBIRTH.innerText = `🎉생일을 축하합니다🎈`
   }
 }
@@ -82,7 +74,6 @@ function BdayOnsubmit (event) {
   const birthDay = new Date((new Date(inputBirth)).getTime() + offset) //.setHours(0)
 
   const findYear = parseInt(inputBirth.substring(0, 4))
-  console.log(findYear)
 
   TXTWRAP.classList.add(ON)
   MONTHAGE.classList.add(ON)
