@@ -2,8 +2,8 @@
   display: none;
 }
 #container {
-  width: 80%;
-  margin: 100px auto;
+  width: 450px;
+  margin: 50px auto;
 }
 .header {
   text-align: center;
@@ -16,9 +16,25 @@
 }
 .header p {
   color: #424242;
-  padding-bottom: 20px;
+  line-height: 120%;
 }
-
+.header p:nth-of-type(1) {
+  padding-bottom: 50px;
+}
+.header ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: calc(50% - 145px);
+}
+.header ul li {
+  line-height: 150%;
+}
+.header ul li::before {
+  content: '☑';
+  padding-right: 5px;
+}
 
 .now_wrap {
   margin-bottom: 80px;
@@ -27,13 +43,13 @@
   align-items: center;
 }
 .now_wrap h4 {
-  margin: 0 10px;
+  margin: 0 5px;
   font-size: 25px;
   font-family: 'GyeonggiTitle';
 }
 
 .input_wrap {
-  padding-bottom: 30px;
+  padding-bottom: 35px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -41,9 +57,9 @@
   align-items: center;
 }
 .input_wrap h4 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 input[type="date"] {
@@ -90,13 +106,20 @@ input[type="date"]::before {
   color: #fff;
 }
 
+.cong_birth {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b6007f;
+  text-align: center;
+  padding-bottom: 20px;
+}
 .txt_wrap {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.txt_wrap h4:first-child {
+.txt_wrap h4 {
   margin-bottom: 20px;
 }
 .txt_wrap .birthyear {
