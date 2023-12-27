@@ -145,6 +145,11 @@ input[type="date"]::before {
   font-weight: 600;
   color: #0C356A;
 }
+h1.empty {
+  font-weight: 600;
+  text-align: center;
+  color: #b10009;
+}
 
 .popup_wrap {
   margin: 100px 0 30px;
