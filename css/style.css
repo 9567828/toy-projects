@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans KR", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+.ibm-plex-sans-kr-regular {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-sans-kr-medium {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-sans-kr-semibold {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.box {
+  margin: 20rem auto;
+  width: 60rem;
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 2rem;
+  font-size: 3rem;
+}
+p {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.btnBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#btn {
+  margin-bottom: 5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #824bdb;
+  color: #fff;
+}
+
+span {
+  font-weight: 500;
+  font-size: 2rem;
+}
