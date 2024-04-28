@@ -26,16 +26,15 @@ html {
 }
 
 .box {
-  margin: 20rem auto;
-  width: 30rem;
-  text-align: center;
+  margin: 5rem auto;
+  width: 55rem;
 }
 
 h1 {
   padding-bottom: 2rem;
   font-size: 3rem;
 }
-p {
+h3 {
   font-size: 2rem;
   padding-bottom: 2rem;
 }
@@ -56,7 +55,67 @@ p {
   color: #fff;
 }
 
-span {
+.moviebox {
+  height: 5.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+#moiveName {
   font-weight: 500;
   font-size: 2rem;
+  padding-right: 2rem;
+}
+#mioveMinuets {
+  font-size: 1.5rem;
+  white-space: pre;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.list_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.mins_list {
+  white-space: pre;
+}
+
+.off {
+  display: none;
+}
+.img_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img_box {
+  width: 45rem;
+  height: 65rem;
+  border-radius: 2rem;
+  /* border: 0.1rem solid #eee; */
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.source {
+  font-size: 1.3rem;
+  color: #5c5c5c;
+  text-align: right;
+  padding-top: 1rem;
 }

@@ -6,6 +6,7 @@
     <title>랜덤 영화 뽑기</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,11 +17,26 @@
 
   <body>
     <div class="box">
-      <h1>영어듣기 영화 뽑기!</h1>
-      <p>나오는대로 무조건 봐야함</p>
       <div class="btnBox">
+        <h1>영어듣기 영화 뽑기!</h1>
+        <h3>나오는대로 무조건 봐야함</h3>
         <button id="btn">클릭</button>
-        <span></span>
+      </div>
+      <div class="moviebox">
+        <p id="moiveName"></p>
+        <p id="mioveMinuets"></p>
+      </div>
+      <div class="img_hidden off">
+        <div class="img_wrap">
+          <div class="img_box">
+            <img src="" alt="" />
+          </div>
+          <p class="source"></p>
+        </div>
+      </div>
+
+      <div class="list_wrap">
+        <ul id="moiveList"></ul>
       </div>
     </div>
 
