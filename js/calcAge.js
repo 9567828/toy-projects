@@ -16,11 +16,9 @@ const display = [TXTWRAP, MONTHAGE, CONGBIRTH, spantxt];
 
 function checkOFF(element) {
   for (let i = 0; i < display.length; ++i) {
-    if (element == display[i]) {
-      element.classList.remove(OFF);
-    } else {
-      display[i].classList.add(OFF);
-    }
+    element == display[i]
+      ? element.classList.remove(OFF)
+      : display[i].classList.add(OFF);
   }
 }
 
