@@ -24,8 +24,6 @@ function checkOFF(element) {
   }
 }
 
-checkOFF();
-
 function paintAge(birthDay, findYear) {
   const today = new Date();
   const thisYear = today.getFullYear();
@@ -66,29 +64,18 @@ function paintAge(birthDay, findYear) {
     babyMonth.innerText = BM;
     babyDays.innerText = BD;
   } else {
+    BYear.innerText = findYear;
+    yearAge.innerText = BYage;
+
     if (nowDate === birthDD) {
       checkOFF(CONGBIRTH);
       TXTWRAP.classList.remove(OFF);
       CONGBIRTH.innerText = `🎉 생일을 축하합니다 🎈`;
-
-      BYear.innerText = findYear;
-      yearAge.innerText = BYage;
-
       nowAge.innerText = BYage;
-    } else if (nowDate >= birthDD) {
-      console.log("생일 지났다");
+    } else {
+      console.log(nowDate > birthDD ? "생일지났다" : "생일 안지났다");
       checkOFF(TXTWRAP);
-      BYear.innerText = findYear;
-      yearAge.innerText = BYage;
-
-      nowAge.innerText = BYage;
-    } else if (nowDate < birthDD) {
-      console.log("생일 안지났다");
-      checkOFF(TXTWRAP);
-      BYear.innerText = findYear;
-      yearAge.innerText = BYage;
-
-      nowAge.innerText = BYage - 1;
+      nowAge.innerText = nowDate > birthDD ? BYage : BYage - 1;
     }
   }
 }
