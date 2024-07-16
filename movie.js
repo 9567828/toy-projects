@@ -143,7 +143,7 @@ const moives = [
     name: "아델라인 - 멈춰진 시간",
     minutes: "112분",
     image:
-      "https://i.namu.wiki/i/8mPlmTaGGx1uUICmnoqSVc8KG9dpBBiCg7rXCidj-qGHmgFB-Ym91QKOkZs2TeHNGVN6_2OPbkvbec8TB_UmKF17tplxtxDDPzhabTDQVW7A2EIhue_FD7m7YOvRZxf4rkLrkPVJQ0jhGsDO8S0T_w.webp",
+      "https://i.namu.wiki/i/U1LpGfpRnpaY90jdmNunw7kZ1xikMEi7Nj-aYfX5tLS6jFGMQDfaNlZp726kTHxT4wp3vmem5aFis8k2IjPJSvCO7VUOOWj9Mg-fSTxqxRSdIuZ0OmwCb1RMVYt-Fnj6HVJPiye9N8qMEMHzBO12ng.webp",
     sources: "나무위키",
   },
   {
@@ -830,7 +830,6 @@ const OFF = "off";
 
 function moviesClick() {
   const randomMovie = moives[Math.floor(Math.random() * moives.length)];
-
   const movieObj = {
     name: randomMovie.name,
     minutes: randomMovie.minutes,
