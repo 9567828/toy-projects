@@ -20,6 +20,7 @@
 </head>
 <body>
   <div id="container">
+    <div class="inner">
     <!-- header -->
     <div class="header">
       <h1>나이 계산</h1>
@@ -71,28 +72,34 @@
     <div class="layer">
       <div class="tit_wrap">
         <h1>나이 계산법</h1>
-        <p>
+        <!-- <p>
           한국은 원래 <strong>‘세는나이’</strong>라는 나이 계산법을 사용했습니다.<br>
           이는 출산과 동시에 한살이 되어 매년 새해마다 한살씩 느는 계산법 입니다.<br>
           2023년 6월 28일 부터 시행 된 만나이 통일법으로<br>
           <strong>각자의 생일마다 한살씩 느는 계산법으로 바뀌었습니다.</strong>
+        </p> -->
+        <p>
+          우리나라는 <strong>출생년도 + 1살</strong>로 나이를 계산했습니다.<br>
+          2023년 6월 28일 부터 만나이 통일법이 시행 되었습니다. <br>
+          만나이는 출생일에 나이를 더하지 않습니다.<br>
+          <strong>앞으로는 각자의 생일마다 한 살씩 계산하면 됩니다</strong>
         </p>
       </div>
       <div class="default_count">
         <p>나이계산은 <strong>1989년생</strong>을 기준으로 합니다.</p>
-        <p>연나이: 2023년 - 1989년 = 34살</p>
+        <p class="orgin-age"></p>
+        <p>연나이: <span class="this-year"></span> - 1989년 = <span class="this-year-age"></span></p>
       </div>
       <div class="calc">
         <div class="before">
           <h4>개정전 만나이 계산법</h4>
-          <p>세는나이: 연나이 + 1살 = 35살</p>
-          <p>생일전: 연나이 - 2살 = 33살</p>
-          <p>생일후: 연나이 - 1살 = 34살</p>
+          <p>생일전: 원래나이 - 2살 = <sapn class="prev-before-birth"></sapn></p>
+          <p>생일후: 원래나이 - 1살 = <sapn class="prev-after-birth"></sapn></p>
         </div>
         <div class="current">
           <h4>만나이 통일법 시행 후</h4>
-          <p>생일전: 연나이 - 1살 = 33살</p>
-          <p>생일후: 연나이 + 1살 = 34살</p>
+          <p>생일전: 연나이 - 1살 = <sapn class="curr-before-birth"></sapn></p>
+          <p>생일후: 연나이 = <sapn class="curr-after-birth"></sapn></p>
         </div>
       </div>
       <div class="txt_wrap">
@@ -101,6 +108,7 @@
       </div>
 
       <button class="btn b3">닫기</button>
+    </div>
     </div>
   </div>
 
