@@ -14,66 +14,80 @@ const OFF = "off";
 const display = [TXTWRAP, MONTHAGE, CONGBIRTH, spantxt];
 // console.log(display);
 
-function checkOFF(element) {
+const checkOFF = (element) => {
   for (let i = 0; i < display.length; ++i) {
     element == display[i]
       ? element.classList.remove(OFF)
       : display[i].classList.add(OFF);
   }
-}
+};
 
-function paintAge(birthDay, findYear) {
-  const today = new Date();
-  const thisYear = today.getFullYear();
-  const ageCalc = today - birthDay;
-
-  console.log(today, birthDay);
-  console.log(ageCalc);
-
-  const BYage = thisYear - findYear;
-  const nowDate = parseInt(
+// 생일 지났는지 여부는 날짜끼리만 비교 가능하니까
+// 일자가 1자리 일 때 날짜 오류를 막기 위해서 앞자리에 0 붙이기 (padStart)
+const getNowDate = (today) =>
+  parseInt(
     `${today.getMonth() + 1}${String(today.getDate()).padStart(2, "0")}`
   );
 
-  const birthDD = parseInt(
+const getBirthDate = (birthDay) =>
+  parseInt(
     `${birthDay.getMonth() + 1}${String(birthDay.getDate()).padStart(2, "0")}`
   );
 
-  const YD = Math.floor(ageCalc / (1000 * 60 * 60 * 24)); // 출생 후 일수
-  const YM = Math.floor((ageCalc / (1000 * 60 * 60 * 24 * 365)) * 12); // 출생 후 개월수
-  const YY = Math.floor(ageCalc / (1000 * 60 * 60 * 24 * 365)); // 출생후 년수 - 나이
+const getBabyDaysOfBirth = (today, birthDay) => {
+  const days = today - birthDay;
 
-  //아기 개월 수 (30일 기준 계산)
-  const BM = Math.floor(YD / 30);
-  const BD = YD - BM * 30;
+  // 출생 후 일수
+  const afterBornDays = Math.floor(days / (1000 * 60 * 60 * 24));
 
-  console.log(BM, BD);
-  console.log(YY, YM, YD);
+  // 아기 개월수 30일 기준 계산
+  const BM = Math.floor(afterBornDays / 30);
+  const BD = afterBornDays - BM * 30;
+
+  return {
+    babyMonth: BM,
+    babyDays: BD,
+  };
+};
+
+function paintAge(birthDay, birthYear) {
+  const today = new Date();
+  const thisYear = today.getFullYear();
+  console.log(today, birthDay);
+
+  // 연나이
+  const birthYearAge = thisYear - birthYear;
+
+  const nowDate = getNowDate(today);
+  const birthDate = getBirthDate(birthDay);
+
+  const babyNumOfMonth = getBabyDaysOfBirth(today, birthDay).babyMonth;
+  const babyNumOfDays = getBabyDaysOfBirth(today, birthDay).babyDays;
 
   if (birthDay > today) {
     console.log("안태어났다. 오늘 날짜보다 크다");
     checkOFF(spantxt);
 
     spantxt.innerText = `현재 날짜보다 미래 입니다.`;
-  } else if (BM <= 24) {
+  } else if (babyNumOfMonth <= 24) {
     console.log("아기나이 24개월 미만");
     checkOFF(MONTHAGE);
 
-    babyMonth.innerText = BM;
-    babyDays.innerText = BD;
+    babyMonth.innerText = babyNumOfMonth;
+    babyDays.innerText = babyNumOfDays;
   } else {
-    BYear.innerText = findYear;
-    yearAge.innerText = BYage;
+    BYear.innerText = birthYear;
+    yearAge.innerText = birthYearAge;
 
-    if (nowDate === birthDD) {
+    if (nowDate === birthDate) {
       checkOFF(CONGBIRTH);
       TXTWRAP.classList.remove(OFF);
       CONGBIRTH.innerText = `🎉 생일을 축하합니다 🎈`;
-      nowAge.innerText = BYage;
+      nowAge.innerText = birthYearAge;
     } else {
-      console.log(nowDate > birthDD ? "생일지났다" : "생일 안지났다");
+      console.log(nowDate > birthDate ? "생일지났다" : "생일 안지났다");
       checkOFF(TXTWRAP);
-      nowAge.innerText = nowDate > birthDD ? BYage : BYage - 1;
+      nowAge.innerText = nowDate > birthDate ? birthYearAge : birthYearAge - 1;
     }
   }
 }
@@ -84,9 +98,9 @@ function BdayOnsubmit(event) {
   const offset = 1000 * 60 * 60 * -9;
   const birthDay = new Date(new Date(inputBirth).getTime() + offset); //.setHours(0)
 
-  const findYear = birthDay.getFullYear();
+  const birthYear = birthDay.getFullYear();
 
-  paintAge(birthDay, findYear);
+  paintAge(birthDay, birthYear);
 }
 
 dateForm.addEventListener("submit", BdayOnsubmit);
