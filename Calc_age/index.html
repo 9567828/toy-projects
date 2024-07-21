@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나이계산하기</title>
+
+  <!-- 경기청년제목체 -->
+  <link href="https://webfontworld.github.io/gyeonggi/GyeonggiTitle.css" rel="stylesheet">
+  <!-- 프리텐다드 -->
+  <link href="https://webfontworld.github.io/pretendard/Pretendard.css" rel="stylesheet">
+
+
+  <!-- 폰트어썸 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- css연결 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+  <div id="container">
+    <div class="inner">
+    <!-- header -->
+    <div class="header">
+      <h1>나이 계산</h1>
+      <p>
+        2023년 06월 28일 시행된<br>
+        만나이 통일법 나이 계산 방법 입니다.
+      </p>
+      <ul>
+        <li>아기는 24개월 까지 개월수와 함께 계산 합니다.</li>
+        <li>25개월 부터는 나이만 나타납니다.</li>
+        <li>30일을 기준으로 계산 되었습니다.</li>
+        <li>만 나이에 따라 출생일은 미포함 입니다</li>
+      </ul>
+      <p>
+      </p>
+    </div>
+
+    <!-- now_wrap -->
+    <div class="now_wrap">
+      <p>현재날짜는<h4></h4>입니다.</p>
+    </div>
+
+    <!-- input_wrap -->
+    <div class="input_wrap">
+      <h4>생년월일을 입력해 주세요.</h4>
+      <form id="date_form">
+        <input type="date" max="9999-12-31" required/>
+        <!-- <i class="fa-solid fa-calendar-days"></i> -->
+        <button class="btn">입력</button>
+      </form>
+    </div>
+
+    <!-- txt_wrap -->
+    <h4 class="cong_birth off"></h4>
+    <div class="month_age off">
+      <h4>태어난지 <span class="month"></span>개월 <span class="days"></span>일째 입니다.</h4>
+    </div>
+    <div class="txt_wrap off">
+      <h4><span class="birthyear"></span>년생의 연나이는 <span class="yearage"></span>살 입니다</h4>
+      <h4>현재나이는 <span class="nowage"></span>살 입니다</h4>
+    </div>
+    <h1 class="empty off"></h1>
+
+    <!-- 팝업 -->
+    <div class="popup_wrap">
+      <p>나이 계산이 헷갈리시나요?</p>
+      <button class="btn b2">🔍</button>
+    </div>
+    <div class="layer">
+      <div class="tit_wrap">
+        <h1>나이 계산법</h1>
+        <!-- <p>
+          한국은 원래 <strong>‘세는나이’</strong>라는 나이 계산법을 사용했습니다.<br>
+          이는 출산과 동시에 한살이 되어 매년 새해마다 한살씩 느는 계산법 입니다.<br>
+          2023년 6월 28일 부터 시행 된 만나이 통일법으로<br>
+          <strong>각자의 생일마다 한살씩 느는 계산법으로 바뀌었습니다.</strong>
+        </p> -->
+        <p>
+          우리나라는 <strong>출생년도 + 1살</strong>로 나이를 계산했습니다.<br>
+          2023년 6월 28일 부터 만나이 통일법이 시행 되었습니다. <br>
+          만나이는 출생일에 나이를 더하지 않습니다.<br>
+          <strong>앞으로는 각자의 생일마다 한 살씩 계산하면 됩니다</strong>
+        </p>
+      </div>
+      <div class="default_count">
+        <p>나이계산은 <strong>1989년생</strong>을 기준으로 합니다.</p>
+        <p class="orgin-age"></p>
+        <p>연나이: <span class="this-year"></span> - 1989년 = <span class="this-year-age"></span></p>
+      </div>
+      <div class="calc">
+        <div class="before">
+          <h4>개정전 만나이 계산법</h4>
+          <p>생일전: 원래나이 - 2살 = <sapn class="prev-before-birth"></sapn></p>
+          <p>생일후: 원래나이 - 1살 = <sapn class="prev-after-birth"></sapn></p>
+        </div>
+        <div class="current">
+          <h4>만나이 통일법 시행 후</h4>
+          <p>생일전: 연나이 - 1살 = <sapn class="curr-before-birth"></sapn></p>
+          <p>생일후: 연나이 = <sapn class="curr-after-birth"></sapn></p>
+        </div>
+      </div>
+      <div class="txt_wrap">
+        <p>이후로는 각자 생일 날짜에 맞추어 +1살씩 계산 하면 됩니다.</p>
+        <p>자세한 내용은 <a href="https://www.moleg.go.kr/menu.es?mid=a10111060000" target="_blank">만나이통일법</a>에서 확인하세요!</p>
+      </div>
+
+      <button class="btn b3">닫기</button>
+    </div>
+    </div>
+  </div>
+
+  <script src="js/nowdate.js"></script>
+  <script src="js/calcAge.js"></script>
+  <script src="js/layer.js"></script>
+</body>
+</html>
