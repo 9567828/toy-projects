@@ -1,0 +1,45 @@
+@media screen and ( max-width: 768px ) {
+  #container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and ( max-width: 450px ) {
+  #container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  span {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    line-height: 5rem;
+  }
+}
+/* 
+@media screen and ( max-width: 390px ) {
+  #container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  span {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    line-height: 5rem;
+  }
+} */
