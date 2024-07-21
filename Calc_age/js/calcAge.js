@@ -48,6 +48,8 @@ const getBabyDaysOfBirth = (today, birthDay) => {
     babyMonth: BM,
     babyDays: BD,
   };
+
+  // 어떻게 되나
 };
 
 function paintAge(birthDay, birthYear) {
