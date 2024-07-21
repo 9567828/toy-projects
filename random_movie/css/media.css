@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+  .box {
+    margin: 1rem auto;
+    width: 35rem;
+  }
+  .img_box {
+    width: 20rem;
+    height: 30rem;
+  }
+  #moiveName {
+    font-size: 1.8rem;
+  }
+}

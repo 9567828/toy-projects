@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>랜덤 영화 뽑기</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="icon" href="img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="btnBox">
+        <h1>영어듣기 영화 뽑기!</h1>
+        <h3>나오는대로 무조건 봐야함</h3>
+        <button id="btn">클릭</button>
+      </div>
+      <div class="moviebox">
+        <p id="moiveName"></p>
+        <p id="mioveMinuets"></p>
+      </div>
+      <div class="img_hidden off">
+        <div class="img_wrap">
+          <div class="img_box">
+            <img src="" alt="" />
+          </div>
+          <p class="source"></p>
+        </div>
+      </div>
+
+      <div class="list_wrap">
+        <ul id="moiveList"></ul>
+      </div>
+    </div>
+
+    <script src="movie.js"></script>
+  </body>
+</html>
