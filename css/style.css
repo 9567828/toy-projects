@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap");
 
 #container {
   width: 144rem;
@@ -22,7 +22,7 @@ p {
   padding: 2rem 3rem;
   border-radius: 1rem;
   border: none;
-  background-color: #186F65;
+  background-color: #186f65;
   color: #fff;
 }
 .random_num {
@@ -35,8 +35,7 @@ span {
   width: 8rem;
   height: 8rem;
   margin-left: 2rem;
-  background-color: #eee;
-  box-shadow: rgba(0, 0, 0, 0.685);
+  box-shadow: 1px 2px 3px 0px rgb(0 0 0 / 0.39);
   border-radius: 100%;
   line-height: 8rem;
   text-align: center;

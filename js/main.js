@@ -1,20 +1,14 @@
 const h1 = document.querySelector("h1");
 const btn = document.querySelector(".btn");
-const spanN1 = document.querySelector(".n1");
-const spanN2 = document.querySelector(".n2");
-const spanN3 = document.querySelector(".n3");
-const spanN4 = document.querySelector(".n4");
-const spanN5 = document.querySelector(".n5");
-const spanN6 = document.querySelector(".n6");
 const span = document.querySelectorAll("span");
 const numWrap = document.querySelector(".random_num");
 
 const HIDDEN = "hidden";
 
-function clickBtn() {
+function getRandomNum() {
   let randomNumArray = [];
   for (i = 0; i < 6; i++) {
-    randomNum = Math.floor(Math.random() * 45) + 1;
+    let randomNum = Math.floor(Math.random() * 45) + 1;
     if (randomNumArray.indexOf(randomNum) === -1) {
       randomNumArray.push(randomNum);
     } else {
@@ -36,20 +30,15 @@ function clickBtn() {
     }
   });
 
+  return randomNumArray;
+}
+
+function clickBtn() {
+  const ranNum = getRandomNum();
   numWrap.classList.remove(HIDDEN);
 
-  console.log(randomNumArray);
-  spanN1.innerText = `${randomNumArray[0]}`;
-  spanN2.innerText = `${randomNumArray[1]}`;
-  spanN3.innerText = `${randomNumArray[2]}`;
-  spanN4.innerText = `${randomNumArray[3]}`;
-  spanN5.innerText = `${randomNumArray[4]}`;
-  spanN6.innerText = `${randomNumArray[5]}`;
+  span.forEach((s, index) => {
+    s.innerText = `${ranNum[index]}`;
+  });
 }
-
 btn.addEventListener("click", clickBtn);
-
-function init() {
-  btn.oninput = clickBtn;
-}
-init();
