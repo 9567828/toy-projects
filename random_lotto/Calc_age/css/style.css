@@ -1,0 +1,266 @@
+#container {
+  width: 450px;
+  margin: 50px auto;
+}
+.header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+.header h1 {
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-family: "GyeonggiTitle";
+}
+.header p {
+  color: #424242;
+  line-height: 120%;
+}
+.header p:nth-of-type(1) {
+  padding-bottom: 50px;
+}
+.header ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: calc(50% - 145px);
+}
+.header ul li {
+  line-height: 150%;
+}
+.header ul li::before {
+  content: "☑";
+  padding-right: 5px;
+}
+
+.now_wrap {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.now_wrap h4 {
+  margin: 0 5px;
+  font-size: 25px;
+  font-family: "GyeonggiTitle";
+}
+
+.input_wrap {
+  padding-bottom: 35px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input_wrap h4 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+input[type="date"] {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  margin-right: 10px;
+  padding: 20px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url("../img/calendar-days-solid.svg") no-repeat center;
+}
+/* input[type="date"]::before {
+  content: attr(data-placeholder);
+  width: 100%;
+} */
+/* valid를 사용하려면 input태그에 required가 들어가야함 */
+input[type="date"]:valid::before {
+  display: none;
+}
+input[type="date"]::before {
+  color: #ccc;
+}
+/* .input_wrap i {
+  position: absolute;
+  top: 42px;
+  right: 46%;
+  cursor: pointer;
+  color: #0C356A;
+} */
+
+.off {
+  display: none;
+}
+
+.input_wrap .btn {
+  width: 60px;
+  height: 42px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #0c356a;
+  color: #fff;
+}
+
+.cong_birth {
+  font-size: 18px;
+  font-weight: 600;
+  color: #b6007f;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.txt_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.txt_wrap h4 {
+  margin-bottom: 20px;
+}
+.txt_wrap .birthyear {
+  font-size: 18px;
+}
+.txt_wrap .yearage,
+.txt_wrap .nowage {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0c356a;
+}
+
+.txt_wrap.off {
+  display: none;
+}
+
+.month_age {
+  text-align: center;
+}
+.month_age h4 {
+  margin-bottom: 20px;
+}
+.month_age .month,
+.month_age .days {
+  font-weight: 600;
+  color: #0c356a;
+}
+h1.empty {
+  font-weight: 600;
+  text-align: center;
+  color: #b10009;
+}
+
+.popup_wrap {
+  margin: 100px 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup_wrap p {
+  margin-right: 10px;
+}
+.popup_wrap .btn.b2 {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.layer {
+  width: 500px;
+  height: 550px;
+  margin: auto;
+  padding: 30px 20px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  display: none;
+}
+.layer strong {
+  font-weight: 600;
+}
+.layer .tit_wrap {
+  padding-bottom: 20px;
+}
+.layer .tit_wrap p {
+  line-height: 120%;
+}
+.layer .tit_wrap h1 {
+  font-size: 35px;
+  padding-bottom: 20px;
+}
+.layer .default_count {
+  position: relative;
+  padding: 20px 0;
+}
+.layer .default_count::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 450px;
+  height: 1px;
+  background-color: #b8b8b8;
+}
+.layer .orgin-age {
+  margin: 10px 0;
+}
+.layer .calc {
+  width: 100%;
+  padding: 20px 0 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.layer .before h4,
+.layer .current h4 {
+  padding-bottom: 15px;
+}
+.layer .before p,
+.layer .current p {
+  text-align: left;
+  margin-bottom: 5px;
+}
+.layer .before {
+  position: relative;
+}
+.layer .before::before {
+  content: "";
+  position: absolute;
+  right: -23px;
+  width: 1px;
+  height: 85px;
+  background-color: #b8b8b8;
+}
+.layer .txt_wrap p:first-child {
+  padding-bottom: 20px;
+}
+.layer .txt_wrap a {
+  color: #0c356a;
+  font-weight: 600;
+}
+.layer .btn.b3 {
+  margin-top: 18px;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0c356a;
+  cursor: pointer;
+}
+.open {
+  display: block;
+}
+
+@media screen and (max-width: 450px) {
+  #container {
+    width: 100%;
+  }
+  .now_wrap h4 {
+    font-size: 20px;
+  }
+}
